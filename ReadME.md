@@ -49,12 +49,9 @@ For more information, refer to the official [Pageviews API documentation](https:
 
 
 ## Running the Code
-The code for the analysis is located in Wikipedia_Article_Traffic_Analysis_2015-2024.ipynb.
+The code for the analysis is located in [Wikipedia_Article_Traffic_Analysis_2015-2024.ipynb](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/Traffic_Analysis_2015-2024_Rare_Diseases.ipynb).
 
-No additional configurations would be needed, so you can simply use the "Run All Cells" or "Restart Kernel and Run All Cells" option in Jupyter Notebook.
-
-- Data acquisition takes around 50 minutes on a laptop with a 13th Gen Intel Core i5-1335U processor and 16GB of RAM. This time accounts for the loop through all diseases in the CSV and includes sleep intervals to avoid hitting Wikimedia's Pageview API rate limits.
-- Ensure that the requests and pandas modules are installed before running the notebook. You can use `pip` or `pip3` for installation.
+No additional configurations would be needed, so you can simply use the "Run All Cells" option in Jupyter Notebook. The data acquisition takes around 50 minutes on a laptop with a 13th Gen Intel Core i5-1335U processor and 16GB of RAM. This time accounts for the loop through all diseases in the CSV and includes sleep intervals to avoid hitting Wikimedia's Pageview API rate limits. Ensure that the requests and pandas modules are installed before running the notebook. You can use `pip` or `pip3` for installation.
 
 ## Generated Files
 
@@ -132,7 +129,6 @@ For this project, we focus on monthly pageviews, so the granularity is set to "m
 2. The graph compares peak views for the top 10 topics from 2015 to 2024. A major spike occurred in 2020, with "Pandemic" leading the surge, reaching over 2 million views on mobile. Mobile views surpassed desktop, reflecting users’ easier access to phones. Related topics like "Black Death" and "Chloroquine" also spiked but stabilized after 2020. Smaller peaks for topics like "Pfeiffer syndrome" are much lower. This data shows a clear link between public health crises and search behavior, with pandemic-related topics dominating viewership.
 
 3. The graph shows that articles with fewer months of data generally have low view counts, except for occasional peaks in "COVID-19 vaccine misinformation" and "Hemolytic jaundice." However, these peaks are small compared to previous graphs. The "vaccine misinformation" article shows distinct viewing patterns between desktop and mobile in early 2023, suggesting platform-specific behavior. Most other topics attract minimal views, indicating a niche audience.
-
 
 # Challenges
 
