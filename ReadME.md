@@ -99,6 +99,7 @@ Contains time series data of the monthly desktop pageview activity for each arti
 3. **rare-disease_monthly_mobile_201501-202409.json**
 Contains time series data of the monthly mobile pageview activity for each article in the CSV.
 **Data Schema:**
+```
 {
     "string": [                        // Page title
         {
@@ -111,6 +112,7 @@ Contains time series data of the monthly mobile pageview activity for each artic
         }
     ]
 }
+```
 
 For this project, we focus on monthly pageviews, so the granularity is set to "monthly" in all records.
 
