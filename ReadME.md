@@ -116,13 +116,13 @@ For this project, we focus on monthly pageviews, so the granularity is set to "m
 
 ### Seaborn Time-Series Plots:
 - **max_avg_min_avg.png:** Displays time series data for the articles with the highest and lowest average page requests across both desktop and mobile access over the entire period.
-![Maximum Average, and Minimum Average Page Requests](\generated_seaborn_plots\max_avg_min_avg.png)
+![Maximum Average, and Minimum Average Page Requests](/generated_seaborn_plots/max_avg_min_avg.png)
 
 - **top_10_peak_page_views.png:** Shows time series data for the top 10 articles based on the largest peak page views, categorized by access type (desktop or mobile).
-![Top 10 Peak Page Views](\generated_seaborn_plots\top_10_peak_page_views.png)
+![Top 10 Peak Page Views](/generated_seaborn_plots/top_10_peak_page_views.png)
 
 - **fewest_months_of_data.png:** Highlights the 10 articles with the fewest months of data for both desktop and mobile access.
-![Fewest Months of Data](\generated_seaborn_plots\fewest_months_of_data.png)
+![Fewest Months of Data](/generated_seaborn_plots/fewest_months_of_data.png)
 
 ### Summary of Analyses
 1. From the max_avg_min_avg.png, the time series graph shows view trends for "Black Death" and "Filippi Syndrome" from 2015 to 2024. In 2020, "Black Death" saw a sharp spike in views, with mobile views surpassing 2 million. After this, views returned to lower levels. "Filippi Syndrome" consistently had minimal views across both platforms. The spike likely shows the increased interest during the COVID-19 pandemic, as people drew parallels to historical events, with more attention on "Black Death" than "Filippi Syndrome."
@@ -133,16 +133,20 @@ The graph shows that articles with fewer months of data generally have low view 
 
 
 # Challenges
-1. utf-8 encoding: while -
-write_to_file(desktop_views, filename=f"{target_folder}/{desktop_views_file}", mode="w+", encoding="utf-8"), with open(file_path, encoding='utf-8') as json_file,
 
-2. The data acquisition code taken from Dr.David's work failed to encode the '/' in article titles like 'Sulfadoxine/pyrimethamine'. Original code:
+1. **UTF-8 Encoding**
+In the data processing, specific encoding practices were implemented to avoid errors. When writing to a file, the code `write_to_file(desktop_views, filename=f"{target_folder}/{desktop_views_file}", mode="w+", encoding="utf-8")` is used to ensure that the data is saved with UTF-8 encoding. Similarly, for reading from a file, the line with `open(file_path, encoding='utf-8') as json_file` is used. Using UTF-8 encoding is crucial when reading and writing JSON files because it accommodates a wide range of characters and symbols, ensuring that the data is accurately represented and can be processed without encountering encoding errors. This was useful for handling special characters that may be present in article titles or content, as it prevents issues related to character representation.
 
-urllib.parse.quote(request_template['article'].replace(' ','_'))
-Modified code (solution):
-
-urllib.parse.quote(request_template['article'].replace(' ','_'), safe='')
-The safe='' parameter ensures all characters, including '/', are properly encoded. This modification was necessary to handle article titles containing '/' in the title.
+2. **Handling Special Characters in Article Titles**
+The original data acquisition code, derived from Dr. David's work, encountered issues with encoding the '/' character in article titles, such as 'Sulfadoxine/pyrimethamine'. The original code was:
+```
+urllib.parse.quote(request_template['article'].replace(' ', '_'))
+```
+To resolve this, the code was modified to:
+```
+urllib.parse.quote(request_template['article'].replace(' ', '_'), safe='')
+```
+By setting `safe=''`, all characters, including '/', are properly encoded. This modification was essential for accurately handling article titles that include the '/' character.
 
 # Considerations and Concerns
 1. **Mobile Data:** The Pageviews API differentiates mobile access into two separate requests. The view counts in the file `rare-disease_monthly_mobile_201501-202409.json` represent the combined total of both mobile web and mobile app traffic for each article.
