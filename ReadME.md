@@ -129,7 +129,7 @@ For this project, we focus on monthly pageviews, so the granularity is set to "m
 
 2. The graph compares peak views for the top 10 topics from 2015 to 2024. A major spike occurred in 2020, with "Pandemic" leading the surge, reaching over 2 million views on mobile. Mobile views surpassed desktop, reflecting users’ easier access to phones. Related topics like "Black Death" and "Chloroquine" also spiked but stabilized after 2020. Smaller peaks for topics like "Pfeiffer syndrome" are much lower. This data shows a clear link between public health crises and search behavior, with pandemic-related topics dominating viewership.
 
-The graph shows that articles with fewer months of data generally have low view counts, except for occasional peaks in "COVID-19 vaccine misinformation" and "Hemolytic jaundice." However, these peaks are small compared to previous graphs. The "vaccine misinformation" article shows distinct viewing patterns between desktop and mobile in early 2023, suggesting platform-specific behavior. Most other topics attract minimal views, indicating a niche audience.
+3. The graph shows that articles with fewer months of data generally have low view counts, except for occasional peaks in "COVID-19 vaccine misinformation" and "Hemolytic jaundice." However, these peaks are small compared to previous graphs. The "vaccine misinformation" article shows distinct viewing patterns between desktop and mobile in early 2023, suggesting platform-specific behavior. Most other topics attract minimal views, indicating a niche audience.
 
 
 # Challenges
@@ -158,8 +158,8 @@ By setting `safe=''`, all characters, including '/', are properly encoded. This 
 
 
 ## File Structure
-
-Week_1/
+```
+DATA515-Homework-1/
 ├── generated_json_files/
 │   ├── rare-disease_monthly_cumulative_201507-202409.json
 │   ├── rare-disease_monthly_desktop_201507-202409.json
@@ -172,4 +172,5 @@ Week_1/
 ├── ReadME.md
 ├── Traffic_Analysis_2015-2024_Rare_Diseases.ipynb
 ├── LICENSE
+```
 
