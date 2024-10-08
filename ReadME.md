@@ -56,7 +56,7 @@ No additional configurations would be needed, so you can simply use the "Run All
 ## Generated Files
 
 #### JSON Data Files
-**rare-disease_monthly_cumulative_201507-202409.json**
+**[rare-disease_monthly_cumulative_201507-202409.json](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_json_files/rare-disease_monthly_cumulative_201507-202409.json)**
 Contains time series data of the total monthly (desktop and mobile) pageview activity for each article in the CSV.
 
 **Data Schema:**
@@ -75,7 +75,7 @@ Contains time series data of the total monthly (desktop and mobile) pageview act
 }
 ```
 
-**rare-disease_monthly_desktop_201507-202409.json**
+**[rare-disease_monthly_desktop_201507-202409.json](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_json_files/rare-disease_monthly_desktop_201507-202409.json)**
 Contains time series data of the monthly desktop pageview activity for each article in the CSV.
 **Data Schema:**
 ```
@@ -93,7 +93,7 @@ Contains time series data of the monthly desktop pageview activity for each arti
 }
 ```
 
-3. **rare-disease_monthly_mobile_201501-202409.json**
+3. **[rare-disease_monthly_mobile_201501-202409.json](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_json_files/rare-disease_monthly_mobile_201507-202409.json)**
 Contains time series data of the monthly mobile pageview activity for each article in the CSV.
 **Data Schema:**
 ```
@@ -114,21 +114,21 @@ Contains time series data of the monthly mobile pageview activity for each artic
 For this project, we focus on monthly pageviews, so the granularity is set to "monthly" in all records.
 
 ### Seaborn Time-Series Plots:
-- **max_avg_min_avg.png:** Displays time series data for the articles with the highest and lowest average page requests across both desktop and mobile access over the entire period.
+- **[max_avg_min_avg.png](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_seaborn_plots/max_avg_min_avg.png):** Displays time series data for the articles with the highest and lowest average page requests across both desktop and mobile access over the entire period.
 ![Maximum Average, and Minimum Average Page Requests](/generated_seaborn_plots/max_avg_min_avg.png)
 
-- **top_10_peak_page_views.png:** Shows time series data for the top 10 articles based on the largest peak page views, categorized by access type (desktop or mobile).
+- **[top_10_peak_page_views.png](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_seaborn_plots/top_10_peak_page_views.png):** Shows time series data for the top 10 articles based on the largest peak page views, categorized by access type (desktop or mobile).
 ![Top 10 Peak Page Views](/generated_seaborn_plots/top_10_peak_page_views.png)
 
-- **fewest_months_of_data.png:** Highlights the 10 articles with the fewest months of data for both desktop and mobile access.
+- **[fewest_months_of_data.png](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_seaborn_plots/fewest_months_of_data.png):** Highlights the 10 articles with the fewest months of data for both desktop and mobile access.
 ![Fewest Months of Data](/generated_seaborn_plots/fewest_months_of_data.png)
 
 ### Summary of Analyses
-1. From the max_avg_min_avg.png, the time series graph shows view trends for "Black Death" and "Filippi Syndrome" from 2015 to 2024. In 2020, "Black Death" saw a sharp spike in views, with mobile views surpassing 2 million. After this, views returned to lower levels. "Filippi Syndrome" consistently had minimal views across both platforms. The spike likely shows the increased interest during the COVID-19 pandemic, as people drew parallels to historical events, with more attention on "Black Death" than "Filippi Syndrome."
+1. From the [max_avg_min_avg.png](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_seaborn_plots/max_avg_min_avg.png), the time series graph shows view trends for "Black Death" and "Filippi Syndrome" from 2015 to 2024. In 2020, "Black Death" saw a sharp spike in views, with mobile views surpassing 2 million. After this, views returned to lower levels. "Filippi Syndrome" consistently had minimal views across both platforms. The spike likely shows the increased interest during the COVID-19 pandemic, as people drew parallels to historical events, with more attention on "Black Death" than "Filippi Syndrome."
 
-2. The graph compares peak views for the top 10 topics from 2015 to 2024. A major spike occurred in 2020, with "Pandemic" leading the surge, reaching over 2 million views on mobile. Mobile views surpassed desktop, reflecting users’ easier access to phones. Related topics like "Black Death" and "Chloroquine" also spiked but stabilized after 2020. Smaller peaks for topics like "Pfeiffer syndrome" are much lower. This data shows a clear link between public health crises and search behavior, with pandemic-related topics dominating viewership.
+2. The graph in [top_10_peak_page_views.png](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_seaborn_plots/top_10_peak_page_views.png) compares peak views for the top 10 topics from 2015 to 2024. A major spike occurred in 2020, with "Pandemic" leading the surge, reaching over 2 million views on mobile. Mobile views surpassed desktop, reflecting users’ easier access to phones. Related topics like "Black Death" and "Chloroquine" also spiked but stabilized after 2020. Smaller peaks for topics like "Pfeiffer syndrome" are much lower. This data shows a clear link between public health crises and search behavior, with pandemic-related topics dominating viewership.
 
-3. The graph shows that articles with fewer months of data generally have low view counts, except for occasional peaks in "COVID-19 vaccine misinformation" and "Hemolytic jaundice." However, these peaks are small compared to previous graphs. The "vaccine misinformation" article shows distinct viewing patterns between desktop and mobile in early 2023, suggesting platform-specific behavior. Most other topics attract minimal views, indicating a niche audience.
+3. The graph in [rare-disease_monthly_mobile_201501-202409.json](https://github.com/navya-eedula-uw/DATA515-Homework-1/blob/main/generated_json_files/rare-disease_monthly_mobile_201507-202409.json) shows that articles with fewer months of data generally have low view counts, except for occasional peaks in "COVID-19 vaccine misinformation" and "Hemolytic jaundice." However, these peaks are small compared to previous graphs. The "vaccine misinformation" article shows distinct viewing patterns between desktop and mobile in early 2023, suggesting platform-specific behavior. Most other topics attract minimal views, indicating a niche audience.
 
 # Challenges
 
